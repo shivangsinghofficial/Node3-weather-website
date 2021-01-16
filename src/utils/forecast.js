@@ -9,7 +9,7 @@ const forecast=(latitude,longitude,callback)=>{
             callback("Unable to find location. Try another search",undefined)
         }
         else {
-            const weather=body.current.weather_descriptions[0]+"- Temperature is "+body.current.temperature+" deg C, and it feels like "+ body.current.feelslike+" deg C. ";
+            const weather=body.current.weather_descriptions[0]+"- Temperature is "+body.current.temperature+" deg C, and it feels like "+ body.current.feelslike+" deg C. Humiity is " + body.current.humidity+".";
             callback(undefined, weather)
         }
     })
